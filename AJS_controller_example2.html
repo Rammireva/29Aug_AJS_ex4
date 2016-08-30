@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+    <title>Angular JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="application/javascript" src="jquery.min.js"></script>
+    <script type="application/javascript" src="bootstrap.min.js"></script>
+    <script type="application/javascript" src="angular.min.js"></script>
+    <script type="application/javascript">
+        var app = angular.module('myapp',[]);
+        app.controller('mycontroller1', function ($scope) {
+            $scope.name = 'Ramesh';
+        });
+        app.controller('mycontroller2', function($scope){
+            $scope.age = '30';
+            $scope.place = 'Bangalore';
+            $scope.education = 'MCA';
+            $scope.work = 'Freenet Solutions';
+        })
+    </script>
+</head>
+<body>
+<div ng-controller="mycontroller1">
+    <h2>{{ name }} </h2>
+</div>
+<div ng-controller="mycontroller2">
+    <h4>Age: <b>{{age}}</b></h4>
+    <h4>Place: <b>{{place}}</b></h4>
+    <h4>Education: <b>{{education}}</b></h4>
+    <h4>Company: <b>{{work}}</b></h4>
+</div>
+</body>
+</html>
